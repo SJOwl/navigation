@@ -12,6 +12,12 @@ To navigate from fragment use
 ```kotlin
 getNavigator().goTo(MyFragment.getInstance(myArguments)),
 where myArguments - bundle with arguments
+
+fun goBack(): Boolean
+fun goToLastOpenedScreen()
+fun goTo(screen: Screen)
+fun backTo(screenKey: String)
+fun goToTab(screenKey: String)
 ```
 
 **Usage**
