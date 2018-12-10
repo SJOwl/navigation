@@ -1,4 +1,4 @@
-package au.sjowl.base.basex
+package au.sjowl.sjnavigation.base
 
 import android.view.LayoutInflater
 import android.view.View

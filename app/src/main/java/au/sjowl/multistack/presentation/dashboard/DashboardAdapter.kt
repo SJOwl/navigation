@@ -1,8 +1,8 @@
 package au.sjowl.multistack.presentation.dashboard
 
 import android.view.ViewGroup
-import au.sjowl.base.basex.BaseRecyclerViewAdapter
 import au.sjowl.multistack.R
+import au.sjowl.sjnavigation.base.BaseRecyclerViewAdapter
 
 class DashboardAdapter(
     val onClickListener: ((item: DashboardItem) -> Unit)

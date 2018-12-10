@@ -1,7 +1,7 @@
 package au.sjowl.sjnavigation.lib
 
-import au.sjowl.sjnavigation.lib.navigator.TabsNavigator
+import au.sjowl.sjnavigation.lib.navigator.FragmentNavigator
 
 interface NavigatorProvider {
-    fun getNavigator(): TabsNavigator
+    fun getNavigator(): FragmentNavigator
 }

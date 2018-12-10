@@ -1,7 +1,7 @@
 package au.sjowl.multistack.presentation.dashboard
 
 import android.view.View
-import au.sjowl.base.basex.BaseViewHolder
+import au.sjowl.sjnavigation.base.BaseViewHolder
 import kotlinx.android.synthetic.main.layout_list_item.view.*
 
 class DashboardItemViewHolder(

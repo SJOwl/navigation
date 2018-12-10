@@ -2,7 +2,7 @@ package au.sjowl.sjnavigation.lib.navigator
 
 import androidx.core.os.bundleOf
 import androidx.fragment.app.FragmentActivity
-import au.sjowl.sjnavigation.base.BaseNavigaitonFragment
+import au.sjowl.sjnavigation.base.BaseNavigationFragment
 import au.sjowl.sjnavigation.lib.Screen
 import au.sjowl.sjnavigation.lib.ScreenState
 import au.sjowl.sjnavigation.utils.setProperty
@@ -18,7 +18,7 @@ abstract class FragmentNavigator(
 
     override fun openNewScreen(screen: Screen) {
         activity.supportFragmentManager.beginTransaction().apply {
-            replace(homeId, screen as BaseNavigaitonFragment)
+            replace(homeId, screen as BaseNavigationFragment)
             commit()
         }
     }
@@ -31,7 +31,7 @@ abstract class FragmentNavigator(
             openNewScreen(currentScreen)
             true
         } else {
-            if (currentTab?.key != homeScreenKey) {
+            if (currentTab?.rootScreen != homeScreenKey) {
                 goToTab(homeScreenKey)
                 true
             } else
@@ -50,7 +50,7 @@ abstract class FragmentNavigator(
                     tab.stack.pop()
                 }
                 tab.stack.push(ScreenState.fromScreen(screen))
-                onTabSelectListener.invoke(tab.key)
+                onTabSelectListener.invoke(tab.rootScreen)
                 return@forEach
             }
         }
@@ -80,7 +80,8 @@ abstract class FragmentNavigator(
             }
             openNewScreen(currentScreen)
         }
-        onTabSelectListener.invoke(currentTab?.key ?: throw IllegalStateException("no current tab"))
+        onTabSelectListener.invoke(currentTab?.rootScreen
+            ?: throw IllegalStateException("no current tab"))
     }
 
     override fun onStart() {
