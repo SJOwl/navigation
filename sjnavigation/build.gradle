@@ -1,24 +1,41 @@
-apply plugin: 'com.novoda.bintray-release'
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.0'
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7.3'
+    }
+}
 
 apply plugin: 'com.android.library'
-
 apply plugin: 'kotlin-android'
-
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'com.jfrog.bintray'
 
-publish {
+ext {
+    bintrayRepo = 'navigation'
+    bintrayName = 'navigation'
 
-    def groupProjectID = 'au.sj.sjnavigation'
-    def artifactProjectID = 'navigation'
-    def publishVersionID = '0.1.0'
+    publishedGroupId = 'au.sj.sjnavigation'
+    libraryName = 'navigation'
+    artifact = 'navigation'
 
-    userOrg = 'sjowl'
-    repoName = 'navigation'
-    groupId = groupProjectID
-    artifactId = artifactProjectID
-    publishVersion = publishVersionID
-    desc = 'Android library to provide multistack navigation for applications with bottombar'
-    website = 'https://github.com/sjowl'
+    libraryDescription = 'Android library to provide multistack navigation for applications with bottombar'
+
+    siteUrl = 'https://github.com/SJOwl/navigation'
+    gitUrl = 'https://github.com/SJOwl/navigation.git'
+
+    libraryVersion = '0.1.0'
+
+    developerId = 'sjowl'
+    developerName = 'Evgenii Vorobei'
+    developerEmail = 'vorobeievgeniy@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
 }
 
 android {
@@ -59,3 +76,5 @@ dependencies {
     implementation "org.jetbrains.anko:anko-commons:$anko_version"
     implementation "com.google.code.gson:gson:$v_gson"
 }
+
+apply from: 'publish.gradle'
