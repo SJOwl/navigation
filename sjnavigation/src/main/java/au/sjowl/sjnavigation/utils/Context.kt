@@ -19,7 +19,7 @@ fun Context.getProperty(tag: String, default_value: String): String {
     var result = default_value
     try {
         val sp = getPrivateSharedPreferences()
-        result = sp.getString(tag, default_value)
+        result = sp.getString(tag, default_value).orEmpty()
     } catch (ex: Exception) {
     }
     return result

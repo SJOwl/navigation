@@ -27,7 +27,6 @@ class TabsFragmentNavigator(
             put(Screens.HOME, HomeTab())
             put(Screens.DASHBOARD, DashboardTab())
         }
-        currentScreen = HomeFragment.getInstance()
         currentTab = tabs[Screens.HOME]
     }
 

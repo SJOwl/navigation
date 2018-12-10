@@ -4,16 +4,16 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import au.sjowl.multistack.R
 import au.sjowl.sjnavigation.NavigatorProvider
-import au.sjowl.sjnavigation.navigator.TabsNavigator
+import au.sjowl.sjnavigation.navigator.FragmentNavigator
 import it.sephiroth.android.library.bottomnavigation.BottomNavigation
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.toast
 
 class MainActivity : AppCompatActivity(), NavigatorProvider {
 
-    override fun getNavigator(): TabsNavigator = navigatorInstance
+    override fun getNavigator() = navigatorInstance
 
-    private val navigatorInstance: TabsNavigator by lazy {
+    private val navigatorInstance: FragmentNavigator by lazy {
         TabsFragmentNavigator(this) { tabKey ->
             bottomBar.setSelectedIndex(when (tabKey) {
                 Screens.HOME -> 0

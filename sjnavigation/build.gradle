@@ -11,6 +11,7 @@ buildscript {
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'org.jmailen.kotlinter'
 apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'com.jfrog.bintray'
 
@@ -61,20 +62,17 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-
-    ext.anko_version='0.10.8'
-    ext.v_gson='2.8.5'
-
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'androidx.appcompat:appcompat:1.1.0-alpha01'
-    implementation 'androidx.core:core-ktx:1.0.1'
-    implementation 'com.google.android.material:material:1.1.0-alpha01'
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
-    implementation 'androidx.vectordrawable:vectordrawable:1.1.0-alpha01'
-    implementation "org.jetbrains.anko:anko-commons:$anko_version"
-    implementation "com.google.code.gson:gson:$v_gson"
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    api "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$v_kotlin"
+    api "androidx.appcompat:appcompat:$v_appcompat"
+    api "androidx.core:core-ktx:$v_corektx"
+    api "com.google.android.material:material:$v_material"
+    api "androidx.constraintlayout:constraintlayout:$v_constraint"
+    api "androidx.vectordrawable:vectordrawable:$v_vectordrawable"
+    api "org.jetbrains.anko:anko-commons:$v_anko"
+    api "com.google.code.gson:gson:$v_gson"
 }
+
+preBuild.dependsOn formatKotlin
 
 apply from: 'publish.gradle'

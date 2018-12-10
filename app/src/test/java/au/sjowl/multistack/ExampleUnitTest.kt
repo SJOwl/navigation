@@ -1,5 +1,3 @@
 package au.sjowl.multistack
 
-class ExampleUnitTest {
-
-}
+class ExampleUnitTest
