@@ -5,19 +5,19 @@ import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import au.sjowl.multistack.R
 import au.sjowl.multistack.navigation.app.Screens
-import au.sjowl.multistack.presentation.dashboarditem.DashboardItemNavigaitonFragment
+import au.sjowl.multistack.presentation.dashboarditem.DashboardItemFragment
 import au.sjowl.sjnavigation.base.BaseNavigaitonFragment
 import au.sjowl.sjnavigation.lib.NavigatorProvider
 import au.sjowl.sjnavigation.lib.Screen
 import kotlinx.android.synthetic.main.fragment_dashboard.*
 
-class DashboardNavigaitonFragment : BaseNavigaitonFragment(), Screen {
+class DashboardFragment : BaseNavigaitonFragment(), Screen {
     override val layoutId: Int get() = R.layout.fragment_dashboard
     override val key: String get() = Screens.DASHBOARD
 
     private val adapter by lazy {
         DashboardAdapter { item ->
-            (activity as NavigatorProvider).getNavigator().goTo(DashboardItemNavigaitonFragment.getInstance(item.name))
+            (activity as NavigatorProvider).getNavigator().goTo(DashboardItemFragment.getInstance(item.name))
         }
     }
 
@@ -33,7 +33,7 @@ class DashboardNavigaitonFragment : BaseNavigaitonFragment(), Screen {
     }
 
     companion object {
-        fun getInstance(arguments: Bundle?, state: Bundle) = DashboardNavigaitonFragment().apply {
+        fun getInstance(arguments: Bundle?, state: Bundle) = DashboardFragment().apply {
             this.arguments = arguments
             this.state = state
         }

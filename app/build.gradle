@@ -37,5 +37,5 @@ dependencies {
     implementation "com.google.code.gson:gson:$v_gson"
 
     implementation "it.sephiroth.android.library.bottomnavigation:bottom-navigation:3.0.0"
-    implementation project(path: ':sjnavigation')
+    implementation project(':sjnavigation')
 }

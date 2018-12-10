@@ -9,7 +9,7 @@ import au.sjowl.sjnavigation.base.BaseNavigaitonFragment
 import au.sjowl.sjnavigation.lib.Screen
 import kotlinx.android.synthetic.main.fragment_dashboard_item.view.*
 
-class DashboardItemNavigaitonFragment : BaseNavigaitonFragment(), Screen {
+class DashboardItemFragment : BaseNavigaitonFragment(), Screen {
     override val layoutId: Int get() = R.layout.fragment_dashboard_item
     override val key: String get() = Screens.DASHBOARD_ITEM
 
@@ -20,11 +20,11 @@ class DashboardItemNavigaitonFragment : BaseNavigaitonFragment(), Screen {
 
     companion object {
         const val KEY_ID = "id"
-        fun getInstance(id: String) = DashboardItemNavigaitonFragment().apply {
+        fun getInstance(id: String) = DashboardItemFragment().apply {
             arguments = bundleOf(KEY_ID to id)
         }
 
-        fun getInstance(arguments: Bundle?, state: Bundle) = DashboardItemNavigaitonFragment().apply {
+        fun getInstance(arguments: Bundle?, state: Bundle) = DashboardItemFragment().apply {
             this.arguments = arguments
             this.state = state
         }
