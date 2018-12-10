@@ -1,13 +1,28 @@
+apply plugin: 'com.novoda.bintray-release'
+
 apply plugin: 'com.android.library'
 
 apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+publish {
+
+    def groupProjectID = 'au.sj.sjnavigation'
+    def artifactProjectID = 'navigation'
+    def publishVersionID = '0.1.0'
+
+    userOrg = 'sjowl'
+    repoName = 'navigation'
+    groupId = groupProjectID
+    artifactId = artifactProjectID
+    publishVersion = publishVersionID
+    desc = 'Android library to provide multistack navigation for applications with bottombar'
+    website = 'https://github.com/sjowl'
+}
+
 android {
     compileSdkVersion 28
-
-
 
     defaultConfig {
         minSdkVersion 17
