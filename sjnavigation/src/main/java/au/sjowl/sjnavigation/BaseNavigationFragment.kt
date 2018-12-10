@@ -1,4 +1,4 @@
-package au.sjowl.sjnavigation.base
+package au.sjowl.sjnavigation
 
 import android.os.Bundle
 import android.os.Parcelable
@@ -8,8 +8,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
-import au.sjowl.sjnavigation.lib.NavigatorProvider
-import au.sjowl.sjnavigation.lib.Screen
 
 abstract class BaseNavigationFragment :
     Fragment(),

@@ -5,8 +5,8 @@ import android.view.View
 import androidx.core.os.bundleOf
 import au.sjowl.multistack.R
 import au.sjowl.multistack.navigation.app.Screens
-import au.sjowl.sjnavigation.base.BaseNavigationFragment
-import au.sjowl.sjnavigation.lib.Screen
+import au.sjowl.sjnavigation.BaseNavigationFragment
+import au.sjowl.sjnavigation.Screen
 import kotlinx.android.synthetic.main.fragment_dashboard_item.view.*
 
 class DashboardItemFragment : BaseNavigationFragment(), Screen {

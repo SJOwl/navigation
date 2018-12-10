@@ -1,4 +1,4 @@
-package au.sjowl.sjnavigation.lib
+package au.sjowl.sjnavigation
 
 import java.util.Stack
 

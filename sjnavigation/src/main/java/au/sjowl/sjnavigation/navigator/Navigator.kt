@@ -1,7 +1,7 @@
-package au.sjowl.sjnavigation.lib.navigator
+package au.sjowl.sjnavigation.navigator
 
-import au.sjowl.sjnavigation.lib.Screen
-import au.sjowl.sjnavigation.lib.ScreenState
+import au.sjowl.sjnavigation.Screen
+import au.sjowl.sjnavigation.ScreenState
 
 abstract class Navigator {
     protected abstract fun getScreen(screenState: ScreenState): Screen
@@ -15,4 +15,7 @@ abstract class Navigator {
 
     abstract fun goTo(screen: Screen)
     abstract fun backTo(screenKey: String)
+    abstract fun onStop()
+    abstract fun onStart()
+    abstract fun clearHistory()
 }

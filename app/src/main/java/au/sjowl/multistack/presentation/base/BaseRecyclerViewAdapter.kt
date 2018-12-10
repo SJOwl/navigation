@@ -1,4 +1,4 @@
-package au.sjowl.sjnavigation.base
+package au.sjowl.multistack.presentation.base
 
 import android.view.LayoutInflater
 import android.view.View

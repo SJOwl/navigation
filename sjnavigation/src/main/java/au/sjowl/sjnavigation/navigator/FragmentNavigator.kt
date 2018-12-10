@@ -1,10 +1,10 @@
-package au.sjowl.sjnavigation.lib.navigator
+package au.sjowl.sjnavigation.navigator
 
 import androidx.core.os.bundleOf
 import androidx.fragment.app.FragmentActivity
-import au.sjowl.sjnavigation.base.BaseNavigationFragment
-import au.sjowl.sjnavigation.lib.Screen
-import au.sjowl.sjnavigation.lib.ScreenState
+import au.sjowl.sjnavigation.BaseNavigationFragment
+import au.sjowl.sjnavigation.Screen
+import au.sjowl.sjnavigation.ScreenState
 import au.sjowl.sjnavigation.utils.setProperty
 import com.google.gson.Gson
 

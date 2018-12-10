@@ -7,9 +7,9 @@ import au.sjowl.multistack.navigation.app.tabs.HomeTab
 import au.sjowl.multistack.presentation.dashboard.DashboardFragment
 import au.sjowl.multistack.presentation.dashboarditem.DashboardItemFragment
 import au.sjowl.multistack.presentation.home.HomeFragment
-import au.sjowl.sjnavigation.lib.Screen
-import au.sjowl.sjnavigation.lib.ScreenState
-import au.sjowl.sjnavigation.lib.navigator.FragmentNavigator
+import au.sjowl.sjnavigation.Screen
+import au.sjowl.sjnavigation.ScreenState
+import au.sjowl.sjnavigation.navigator.FragmentNavigator
 
 class TabsFragmentNavigator(
     activity: FragmentActivity,
