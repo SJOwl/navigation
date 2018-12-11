@@ -1,1 +1,1 @@
-include ':app', ':sjnavigation'
+include ':app', ':navigation'

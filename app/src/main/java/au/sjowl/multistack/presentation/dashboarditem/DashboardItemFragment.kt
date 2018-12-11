@@ -3,10 +3,10 @@ package au.sjowl.multistack.presentation.dashboarditem
 import android.os.Bundle
 import android.view.View
 import androidx.core.os.bundleOf
+import au.sjowl.libs.navigation.BaseNavigationFragment
+import au.sjowl.libs.navigation.Screen
 import au.sjowl.multistack.R
 import au.sjowl.multistack.navigation.app.Screens
-import au.sjowl.sjnavigation.BaseNavigationFragment
-import au.sjowl.sjnavigation.Screen
 import kotlinx.android.synthetic.main.fragment_dashboard_item.view.*
 
 class DashboardItemFragment : BaseNavigationFragment(), Screen {

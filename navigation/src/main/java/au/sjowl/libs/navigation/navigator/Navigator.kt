@@ -1,7 +1,7 @@
-package au.sjowl.sjnavigation.navigator
+package au.sjowl.libs.navigation.navigator
 
-import au.sjowl.sjnavigation.Screen
-import au.sjowl.sjnavigation.ScreenState
+import au.sjowl.libs.navigation.Screen
+import au.sjowl.libs.navigation.ScreenState
 
 abstract class Navigator {
     protected abstract fun getScreen(screenState: ScreenState): Screen

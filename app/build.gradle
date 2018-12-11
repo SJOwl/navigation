@@ -22,8 +22,8 @@ android {
 }
 
 dependencies {
-
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$v_kotlin"
     implementation "androidx.appcompat:appcompat:$v_appcompat"
     implementation "androidx.core:core-ktx:$v_corektx"
@@ -34,7 +34,7 @@ dependencies {
     implementation "com.google.code.gson:gson:$v_gson"
 
     implementation "it.sephiroth.android.library.bottomnavigation:bottom-navigation:$v_bottomnavigation"
-    implementation project(':sjnavigation')
+    implementation project(':navigation')
 }
 
 preBuild.dependsOn formatKotlin

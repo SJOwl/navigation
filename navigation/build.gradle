@@ -1,0 +1,57 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'org.jmailen.kotlinter'
+apply plugin: 'com.novoda.bintray-release' // must be applied after your artifact generating plugin (eg. java / com.android.library)
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.novoda:bintray-release:0.9'
+    }
+}
+
+publish {
+    userOrg = 'sjowl'
+    groupId = 'au.sjowl.libs.navigation'
+    artifactId = 'bottombar'
+    publishVersion = '0.1.1'
+    desc = 'Android library to provide multistack navigation for applications with bottombar'
+    website = 'https://github.com/SJOwl/navigation'
+}
+
+android {
+    compileSdkVersion 28
+
+    defaultConfig {
+        minSdkVersion 17
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    api "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$v_kotlin"
+    api "androidx.appcompat:appcompat:$v_appcompat"
+    api "androidx.core:core-ktx:$v_corektx"
+    api "com.google.android.material:material:$v_material"
+    api "androidx.constraintlayout:constraintlayout:$v_constraint"
+    api "androidx.vectordrawable:vectordrawable:$v_vectordrawable"
+    api "org.jetbrains.anko:anko-commons:$v_anko"
+    api "com.google.code.gson:gson:$v_gson"
+}
+
+preBuild.dependsOn formatKotlin

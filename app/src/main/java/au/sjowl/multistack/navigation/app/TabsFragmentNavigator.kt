@@ -1,15 +1,15 @@
 package au.sjowl.multistack.navigation.app
 
 import androidx.fragment.app.FragmentActivity
+import au.sjowl.libs.navigation.Screen
+import au.sjowl.libs.navigation.ScreenState
+import au.sjowl.libs.navigation.navigator.FragmentNavigator
 import au.sjowl.multistack.R
 import au.sjowl.multistack.navigation.app.tabs.DashboardTab
 import au.sjowl.multistack.navigation.app.tabs.HomeTab
 import au.sjowl.multistack.presentation.dashboard.DashboardFragment
 import au.sjowl.multistack.presentation.dashboarditem.DashboardItemFragment
 import au.sjowl.multistack.presentation.home.HomeFragment
-import au.sjowl.sjnavigation.Screen
-import au.sjowl.sjnavigation.ScreenState
-import au.sjowl.sjnavigation.navigator.FragmentNavigator
 
 class TabsFragmentNavigator(
     activity: FragmentActivity,

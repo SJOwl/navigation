@@ -2,11 +2,11 @@ package au.sjowl.multistack.presentation.home
 
 import android.os.Bundle
 import android.view.View
+import au.sjowl.libs.navigation.BaseNavigationFragment
+import au.sjowl.libs.navigation.Screen
 import au.sjowl.multistack.R
 import au.sjowl.multistack.navigation.app.Screens
 import au.sjowl.multistack.presentation.dashboarditem.DashboardItemFragment
-import au.sjowl.sjnavigation.BaseNavigationFragment
-import au.sjowl.sjnavigation.Screen
 import kotlinx.android.synthetic.main.fragment_home.view.*
 
 class HomeFragment : BaseNavigationFragment(), Screen {

@@ -1,4 +1,4 @@
-package au.sjowl.sjnavigation.utils
+package au.sjowl.libs.navigation.utils
 
 import android.content.Context
 import android.content.SharedPreferences

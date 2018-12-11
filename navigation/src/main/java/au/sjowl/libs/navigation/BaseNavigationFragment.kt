@@ -1,4 +1,4 @@
-package au.sjowl.sjnavigation
+package au.sjowl.libs.navigation
 
 import android.os.Bundle
 import android.os.Parcelable

@@ -2,9 +2,9 @@ package au.sjowl.multistack.navigation.app
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import au.sjowl.libs.navigation.NavigatorProvider
+import au.sjowl.libs.navigation.navigator.FragmentNavigator
 import au.sjowl.multistack.R
-import au.sjowl.sjnavigation.NavigatorProvider
-import au.sjowl.sjnavigation.navigator.FragmentNavigator
 import it.sephiroth.android.library.bottomnavigation.BottomNavigation
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.toast

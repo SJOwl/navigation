@@ -1,7 +1,7 @@
 package au.sjowl.multistack.navigation.app.tabs
 
+import au.sjowl.libs.navigation.Tab
 import au.sjowl.multistack.navigation.app.Screens
-import au.sjowl.sjnavigation.Tab
 
 class DashboardTab : Tab(Screens.DASHBOARD) {
     override val screens: ArrayList<String>

@@ -1,6 +1,6 @@
-package au.sjowl.sjnavigation.navigator
+package au.sjowl.libs.navigation.navigator
 
-import au.sjowl.sjnavigation.Tab
+import au.sjowl.libs.navigation.Tab
 
 abstract class TabsNavigator : Navigator() {
     protected open val tabs = mutableMapOf<String, Tab>()
